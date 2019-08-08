@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reverie Email Signature</title>
+</head>
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>
+    .bootstrap-iso .formden_header h2,
+    .bootstrap-iso .formden_header p,
+    .bootstrap-iso form {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black
+    }
+
+    .bootstrap-iso form button,
+    .bootstrap-iso form button:hover {
+        color: white !important;
+    }
+
+    .asteriskField {
+        color: red;
+    }
+</style>
+
+<body>
+    <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+    <div class="bootstrap-iso">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <form name="signature" method="post" action="/create">
+                        <div class="form-group ">
+                            <label class="control-label requiredField" for="fname">
+                                First Name
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="fname" name="fname" type="text" />
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label requiredField" for="lname">
+                                Last Name
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="lname" name="lname" type="text" />
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label requiredField" for="designation">
+                                Designation
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="designation" name="designation" type="text" />
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label requiredField" for="email">
+                                Email
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="email" name="email" type="text" />
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label " for="mobile">
+                                Mobile Number
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="mobile" name="mobile" type="text" />
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label requiredField" for="email1">
+                                Reverie Email ID
+                                <span class="asteriskField">
+                                    *
+                                </span>
+                            </label>
+                            <input class="form-control" id="email1" name="email1" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button class="btn btn-primary " name="submit" type="submit">
+                                    Generate Signature
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
