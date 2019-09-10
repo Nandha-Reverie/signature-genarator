@@ -1,98 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Reverie Email Signature</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Reverie Email Signature Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./signin.css" rel="stylesheet">
 </head>
-<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>
-    .bootstrap-iso .formden_header h2,
-    .bootstrap-iso .formden_header p,
-    .bootstrap-iso form {
-        font-family: Arial, Helvetica, sans-serif;
-        color: black
-    }
+<body class="text-center">
+    <form class="form-signin" action="/create" method="post">
+        <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Generate Your Email Signature</h1>
+        <label for="text" class="sr-only">Full Name</label>
+        <input name="fname" type="text" id="inputfullname" class="form-control" placeholder="Full Name" required
+            autofocus>
+        <label for="text" class="sr-only">Full Name In Other Language</label>
+        <input name="fname1" type="text" id="inputfullnameother" class="form-control"
+            placeholder="Full Name In Other Language" required>
+        <label for="text" class="sr-only">Designation</label>
+        <input name="designation" type="text" id="inputdesignation" class="form-control" placeholder="Designation"
+            required>
+        <label for="email" class="sr-only">Email address</label>
+        <input name="email" type="email" id="inputemail" class="form-control" placeholder="Email address" required>
+        <label for="inputPassword" class="sr-only">Mobile No</label>
+        <input name="mobile" type="tel" id="inputpassword" class="form-control" placeholder="Mobile No" required>
 
-    .bootstrap-iso form button,
-    .bootstrap-iso form button:hover {
-        color: white !important;
-    }
-
-    .asteriskField {
-        color: red;
-    }
-</style>
-
-<body>
-    <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-    <div class="bootstrap-iso">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <form name="signature" method="post" action="/create">
-                        <div class="form-group ">
-                            <label class="control-label requiredField" for="fname">
-                                Full Name
-                                <span class="asteriskField">
-                                    *
-                                </span>
-                            </label>
-                            <input class="form-control" id="fname" name="fname" type="text" required/>
-                        </div>
-                        <div class="form-group ">
-                            <label class="control-label requiredField" for="lname">
-                                Full Name In Other Language
-                                <span class="asteriskField">
-                                    *
-                                </span>
-                            </label>
-                            <input class="form-control" id="lname" name="lname" type="text"  required/>
-                        </div>
-                        <div class="form-group ">
-                            <label class="control-label requiredField" for="designation">
-                                Designation
-                                <span class="asteriskField">
-                                    *
-                                </span>
-                            </label>
-                            <input class="form-control" id="designation" name="designation" type="text" required/>
-                        </div>
-                        <div class="form-group ">
-                            <label class="control-label requiredField" for="email">
-                                Reverie Email ID
-                                <span class="asteriskField">
-                                    *
-                                </span>
-                            </label>
-                            <input class="form-control" id="email" name="email" type="text" required/>
-                        </div>
-                        <div class="form-group ">
-                            <label class="control-label " for="mobile">
-                                Mobile Number
-                                <span class="asteriskField">
-                                    *
-                                </span>
-                            </label>
-                            <input class="form-control" id="mobile" name="mobile" type="text" required/>
-                        </div>
-                
-                        <div class="form-group">
-                            <div>
-                                <button class="btn btn-primary " name="submit" type="submit">
-                                    Generate Signature
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:15px;">Generate
+            Signature</button>
+        <p class="mt-5 mb-3 text-muted">&copy; Reverie Language Technologies Private Limited</p>
+    </form>
 </body>
 
 </html>
