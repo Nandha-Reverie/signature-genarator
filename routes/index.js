@@ -13,9 +13,7 @@ router.post('/create', (req, res) => {
     const email = req.body['email']
     const mobile = req.body['mobile']
 
-    console.log('====================================');
-    console.log(fname, fname1, designation, mobile);
-    console.log('====================================');
+
 
     res.render('signature', {
         fname,
